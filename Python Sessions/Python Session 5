@@ -1,0 +1,49 @@
+# Module 1
+# Exercise1: Using the functions defined above check the calculations in Lial Section 8.1 Examples 3 and 9, and Section 8.2 Example 3. 
+
+print ('Example 3,3 letters is %r') %perm(3,3)
+print ('Example 3,two of three letters is %r') %perm(3,2)
+
+P=(factorial(11))/(factorial(1)*factorial(4)*factorial(4)*factorial(2))
+print ('Example 9, Mississippi is %r') %P
+print ('Example 3, Sales is %r') %comb(10,3)
+
+Example 3, 3 Letters is 6
+
+Example 3, two of three letters is 6
+
+Example 9, Mississippi is 34650
+
+Example 3, Sales is 120
+
+# Exercise 2: Using the concept of a "for" loop discussed in Section 10.3 of "Think Python", write a function that calculates factorials without 
+# using a recursive approach. 
+
+def fact(n):
+        if n == 0:
+                 return 1
+        else:
+                 result=1
+                 for k in range(0,n):
+                          result = result*(k+1)
+                 return result
+                 
+# Module 2:
+
+Exercise1: Using a variation of the code and functions defined, check the calculations in Lial Section 8.4 Example 2. 
+Note the distributions which are produced.
+
+print ('Example 2 College Students %r') %round(binomial(6,3,0.59),4)
+Example 2 College Students 0.2831
+
+Exercise 2:  Using the function "binomial" as defined in the code, write the code to verify the calculations in Lial Section 8.5 Example 7.  
+
+F=0*binomial(5,0,.787)+1*binomial(5,1,.787)+2*binomial(5,2,.787)
+
+F=F+3*binomial(5,3,.787)+4*binomial(5,4,.787)+5*binomial(5,5,.787)
+
+print('Expected Number of Females in Sample is %r') %roun
+
+d(F,3)
+
+Expected Number of Female in Sample is 3.935
