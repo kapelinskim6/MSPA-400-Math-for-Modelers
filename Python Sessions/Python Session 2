@@ -1,0 +1,59 @@
+MSPA 400 Session 2
+Python Solutions 1
+Module 1:  
+
+Exercise: Refer to Lial Section 2.1 Problem 46 on page 53. Solve for a # and b using the Echlon Method. 
+Plot the resulting quadratic function.  
+
+figure()
+x=linspace(0,100,100)
+y=0.056057*x*x+1.06657*x
+y55=0.056057*(55)**2+1.06657*(55)
+xlabel('Speed in mph')
+ylabel('Stopping Distance in ft')
+title ('Plot of Stopping Distance versus Speed')
+scatter(55,y5
+5,c='y',s=40)
+plot(x,y)
+show()
+
+Module 2:
+Exercise :Refer to Lial Section 2.3 Example 7. Write the code which reproduces the calculations shown 
+in that example. For the array which results, slice it to show 1) second row, 2) the third column and 3) 
+the single element common to (1) and (2). 
+
+C=array([[22,25,38],[31,34,35]])
+
+print ('\nArray C')print CK=array([[5,10,8],[11,14,15]])
+
+print ('\nArray K')
+
+print K
+
+M= C-K
+
+print ('\nResult of Subtraction')
+
+print M
+
+print ('\nSecond Row of Result is %s') %M[1,:]
+print ('Third Column of Result is %s') %M[:,2]
+print (‘Common Element is %r’) %M[1,2]
+
+Array C
+[[22 25 38]
+[31 34 35]]
+
+Array K
+[[ 5 10  8]
+[11 14 15]]
+
+Result of Subtraction
+[[17 15 30]
+[20 20 20]]
+
+Second Row of Result is [20 20 20]
+
+Third Column of Result is [30 20]
+
+Common Element is 20
