@@ -1,49 +1,41 @@
-Module 
-1
-Exercise
-1
-:
-Generate a series of plotted histograms using the code.  Generate five plots using nsample 
-values increasing by powers of ten
-: 100, 1000, 10000, 100000, 1000000
-. Calculate the sample mean 
-value and absolute difference for each plot. Evaluate the changes in absolute difference and mean 
-values as the sample size increases. When computing the sample mean value, use the dictionary 
-histogram and the ind array. The ind
-array needs to be centered within each subinterval. (Hint: add 0.5)
-Exercise 2:
-A
-dd code to estimate the sample variance for each random sample. For simplicity, calculate 
-the sum of the following terms: histogram[k]*(ind[k]
--
-mean)**2. In the limit as nsamples approac
-hes 
-infinity, for sample data grouped in subintervals centered at 0.5, 1.5, ..., 
-8.5, 9.5, the limiting value is 
-8.25. Do you see convergence? 
-Computed results
-for Exercise 2
-are shown
-below
-along with
-two 
-sample 
-plots 
-from Exercise 1
-.  
-The 
-shape of these plots will change as the sample size changes and the random numbers change.
+Module 1
+
+#Exercise 1: Generate a series of plotted histograms using the code.  Generate five plots using nsample values increasing 
+#by powers of ten: 100, 1000, 10000, 100000, 1000000. Calculate the sample mean value and absolute difference for each plot. 
+#Evaluate the changes in absolute difference and mean values as the sample size increases. When computing the sample mean value, 
+#use the dictionary histogram and the ind array. The indarray needs to be centered within each subinterval. (Hint: add 0.5)
+
+#Exercise 2: Add code to estimate the sample variance for each random sample. For simplicity, calculate the 
+#sum of the following terms: histogram[k]*(ind[k]-mean)**2. In the limit as nsamples approaches infinity, for sample data 
+#grouped in subintervals centered at 0.5, 1.5, ..., 8.5, 9.5, the limiting value is 8.25. Do you see convergence? Computed results 
+#for Exercise 2are shownbelowalong withtwo sample plots from Exercise 1.  
+
+#The shape of these plots will change as the sample size changes and the random numbers change. 
+
 ind=ind+0.5
 mean=0.0
 for k in range(0,len(h)):
-mean=mean+hi
-stogram[k]*ind[k]
+         mean=mean+histogram[k]*ind[k]
+
 print('n= %r and the mean value= %r') %(nsamples, round(mean,3))
+
 variance=0.0
 for k in range(0,len(h)):
-variance=variance+histogram[k]*(ind[k]
--
-mean)**2
-print('
-\
-nn= %r the sample variance equals %r') %(nsamples,round(variance,3))
+         variance=variance+histogram[k]*(ind[k]-mean)**2
+
+print('\nn= %r the sample variance equals %r') %(nsamples,round(variance,3))
+
+Module 2:  
+
+# Exercise 1:  Refer to Lial Chapter 18 Section 18.3. Reproduce the results shown in Example 3(c).
+
+Area with x= -0.31 equals 0.3783
+Area with x= -0.88 equals 0.1894
+Manually subtracting the two values gives 0.1889.
+
+# Exercise 2:  Refer to Lial Chapter 18 Section 18.3. Reproduce the results in Example 4 part(a).The solution requires running 
+# the existing code without modification. Due to the symmetry of the normal density function, this problem is equivalent to 
+# finding the probability that Z <= -2.34. 
+
+Value of the variable x for integration = -2.34
+Area with x= -2.34 equals 0.0096
