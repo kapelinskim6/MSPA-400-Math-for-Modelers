@@ -1,9 +1,9 @@
-Module 1
+# Module 1
 
-Exercise:Instead of using the trapazoidal rule for integration, substitute midpoint rule in the function integrate() 
-and run the rest of the code without modification. Note the difference in how convergence occurs.
+# Exercise: Instead of using the trapazoidal rule for integration, substitute midpoint rule in the function integrate() 
+# and run the rest of the code without modification. Note the difference in how convergence occurs.
 
-The modifications to the integrate function are shown below with the plot.
+# The modifications to the integrate function are shown below with the plot.
 
 def integrate(a,b,n):
         sum = 0.0
@@ -14,9 +14,9 @@ def integrate(a,b,n):
                   i = i+1
         return sum
         
-Module 2
+# Module 2
 
-Exercise:Refer to Lial Section 15.4 Exercise 42. Modify the code to reproduce the plot shown in the exercise. 
+# Exercise: Refer to Lial Section 15.4 Exercise 42. Modify the code to reproduce the plot shown in the exercise. 
 
 def f(x):
         f = x*x-2.0*x 
