@@ -1,0 +1,49 @@
+Module 
+1
+Exercise
+1
+:
+Generate a series of plotted histograms using the code.  Generate five plots using nsample 
+values increasing by powers of ten
+: 100, 1000, 10000, 100000, 1000000
+. Calculate the sample mean 
+value and absolute difference for each plot. Evaluate the changes in absolute difference and mean 
+values as the sample size increases. When computing the sample mean value, use the dictionary 
+histogram and the ind array. The ind
+array needs to be centered within each subinterval. (Hint: add 0.5)
+Exercise 2:
+A
+dd code to estimate the sample variance for each random sample. For simplicity, calculate 
+the sum of the following terms: histogram[k]*(ind[k]
+-
+mean)**2. In the limit as nsamples approac
+hes 
+infinity, for sample data grouped in subintervals centered at 0.5, 1.5, ..., 
+8.5, 9.5, the limiting value is 
+8.25. Do you see convergence? 
+Computed results
+for Exercise 2
+are shown
+below
+along with
+two 
+sample 
+plots 
+from Exercise 1
+.  
+The 
+shape of these plots will change as the sample size changes and the random numbers change.
+ind=ind+0.5
+mean=0.0
+for k in range(0,len(h)):
+mean=mean+hi
+stogram[k]*ind[k]
+print('n= %r and the mean value= %r') %(nsamples, round(mean,3))
+variance=0.0
+for k in range(0,len(h)):
+variance=variance+histogram[k]*(ind[k]
+-
+mean)**2
+print('
+\
+nn= %r the sample variance equals %r') %(nsamples,round(variance,3))
