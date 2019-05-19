@@ -1,0 +1,53 @@
+# Module 1
+
+# Exercise 1 :Refer to Lial Refer to Lial Section 13.1 Example 2. Reproduce Figure 7.
+
+plt.figure()
+def f(x):
+        y= x**3+3.0*x**2-9*x+4.0
+        return y
+xa= -6.0
+xb= +4.0
+
+# Exercise 2:  2. Plot the function f(t) = 0.000316t3–0.0471t2+ 0.114t + 1.47 over the interval [0,10] and 
+# use that plot to find its maxima and minima within that interval. 
+
+plt.figure()
+def f(x):
+        y= 0.00316*x**3-0.0471*x**2+0.114*x+1.47
+        return y
+xa= 0.0
+xb= +10.0
+
+# Module 2
+# Exercise:  Refer to Lial Section 14.1 Example 2. Duplicate the results showing plots of the function and derivatives.
+
+figure()
+p=poly1d([3,-4,-12,0,2])
+
+print ('\nFourth Degree Polynomial') 
+print p
+print ('\nFirst Derivative')
+
+g= p.deriv(m=1) # First derivative with m=1.
+print g
+print ('\nSecond Derivative')
+
+q= p.deriv(m=2) # Second derivative with m=2.
+print q
+
+x=linspace(-2,3,101)
+y=p(x)
+yg=g(x) # 
+These statements define points for plotting.
+yq=q(x)
+y0=0*x # This statement defines the y axis for plotting.
+
+# Fourth Degree Polynomial
+3 x**4-4 x**3-12 x**2+ 2
+
+# First Derivative
+12 x**3-12 x**2-24 x
+
+# Second Derivative
+36 **2x -24 x -24
