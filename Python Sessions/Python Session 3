@@ -1,10 +1,9 @@
-MSPA 400 Session 3
+# MSPA 400 Session 3
 
-Exercise:
-Refer to Lial Section 3.1 page 125. Write the code to reproduce Figure 10. 
-It is possible to fill the feasible region by specifying the corner points of the polygon.  The solution shown 
-below uses the fill_between() command with the where= statement to specify the plotting region.  Also, the xlim() and ylim() 
-commands give horizontal and vertical boundaries.
+# Exercise: Refer to Lial Section 3.1 page 125. Write the code to reproduce Figure 10. 
+# It is possible to fill the feasible region by specifying the corner points of the polygon.  The solution shown 
+# below uses the fill_between() command with the where= statement to specify the plotting region.  Also, the xlim() and ylim() 
+# commands give horizontal and vertical boundaries.
 
 figure()
 x= arange(0,10.1,0.1)
@@ -25,3 +24,50 @@ fill_between(x,y1,where=(y1<=y2), color= 'b')
 title ('Shaded Area Shows the Feasible Region')
 
 show()
+
+# Module 2: 
+
+# Exercise:  Refer to Lial section 3.2 Example 3. Using matrix methods, evaluate the objective function at each corner point 
+# and determine both the maximum and the minimum. Compare your code and solutions with the answer sheet.
+
+x= [6,6,4,0]
+y= [6,3,2,3]
+obj= matrix([1.0,10.0])
+obj= transpose(obj)
+corners= matrix([x,y])
+corners= transpose(corners)
+result= dot(corners,obj)
+print ('Value of Objective Function at Each Corner Point:\n'), result
+
+Value of Objective Function at Each Corner Point:  [[ 66.]  [ 36.]  [ 24.]  [ 30.]]
+
+# Module 3:
+
+# Exercise: Using the matrix methods, verify the calculations in Lial Section 4.3 Example 1. 
+
+print ('\nMinimization Problem')
+
+x=[0,4,9]
+y=[5,1,0]
+obj= matrix([8.0,16.0])
+obj= transpose(obj)
+corners= matrix([x,y])
+corners= transpose(corners)
+result= dot(corners,obj)
+print ('Value of Objective Function at Each Corner Point\n'), result
+
+print ('\nMaximization Problem')
+x=[0,2,3.2]
+y=[4,3,0]
+obj= matrix([9.0,10.0])
+obj= transpose(obj)
+corners= matrix([x,y])
+corners= transpose(corners)
+result= dot(corners,obj)
+print ('Value of Objective Function at Each Corner Point\n'), result
+
+# Minimization Problem
+Value of Objective Function at Each Corner Point:  [[ 80.]   [ 48.]   [ 72.]]
+
+# Maximization Problem
+Value of Objective Function at Each Corner Point:  [[ 40. ]   [ 48. ]   [ 28.8]
