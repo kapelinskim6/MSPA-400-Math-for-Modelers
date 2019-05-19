@@ -1,0 +1,90 @@
+# Module 1
+# Exercise: Duplicate Examples 6 and 7 from Lial Section 7.1.
+
+print ('Example 6 Set Operations\n')
+U=set([0,1,2,3,4,5,6,7,8,9,10])
+A=set([3,6,9])
+B=set([2,4,6,8])
+
+print ('U is %s ') %U
+print ('A is %s ') %A
+print ('B is %s ') %B
+print('\nA intersection B is %s') %(A&B)
+
+Bc=U-B
+
+print('\nA intersection B complement is %s') %(A&Bc)
+print ('Example 7 Union of Sets\n')
+
+U=set([0,1,2,3,4,5,6,7,8,9,10,11,12])
+A=set([1,3,5,7,9,11])
+B=set([3,6,9,12])
+C=set([1,2,3,4,5])
+
+print ('U is %s ') %U
+print ('A is %s ') %A
+print ('B is %s ') %B
+print ('C is %s ') %C
+print ('\nA union B is %s') %(A|B)
+
+Cc=U-C
+
+print ('Union of A and B intersected with C complement is %s ') %((A|B)&Cc)
+
+# Example 6 Set Operations
+U is set([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) 
+
+A is set([9, 3, 6]) 
+
+B is set([8, 2, 4, 6]) 
+
+A intersection B is set([6])
+
+A intersection B complement is set([9, 3])
+
+# Example 7 Union of Sets
+U is set([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]) 
+
+A is set([1, 3, 5, 7, 9, 11]) 
+
+B is set([9, 3, 12, 6]) 
+
+C is set([1, 2, 3, 4, 5]) 
+
+A union B is set([1, 3, 5, 6, 7, 9, 11, 12])
+
+Union of A and B intersected with C complement is set([9, 11, 12, 6, 7]) 
+
+# Module 2
+
+# Exercise:  Refer to Section 7.6 of Lial. Using the sets defined above and set operations, apply Bayes' Theorem.  
+# Calculate the conditional probability of A given C, and the probability of C given A.
+
+P=round(len(A&C)/float(len(C)),3)
+
+print('Conditional probability of A given C is %r') %P
+
+Q=len(C)/T
+
+print('Probability of C is %r') %round(Q,3)
+
+Qc=1.0-Q
+
+print ('Probability of C complement is %r') %round(Qc,3)
+
+R=round(len(A&(U-C))/float(len(U-C)),3)
+
+print ('Conditional probabilty of A given C complement is %r') %R
+
+Bayes_Result= Q*P/(Q*P+R*Qc)
+print ('Bayes Result for Probability of C given A %r') %(Bayes_Result)
+
+Conditional probability of A given C is 0.462
+
+Probability of C is 0.5
+
+Probability of C complement is 0.5
+
+Conditional probabilty of A given C complement is 0.538
+
+Bayes Result for Probability of C given A 0.462
